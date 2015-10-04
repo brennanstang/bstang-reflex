@@ -1,0 +1,25 @@
+<!-- Started this by following guide at http://blog.idleworx.com/2011/06/build-simple-android-app-2-button.html then edited from there. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="REFLEX. \n\n How fast are your reflexes? \n\n\n\n"
+        android:padding="10dp"
+        android:textColor="#000000"
+        />
+    <Button
+        android:id="@+id/singlePlayer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Player"/>
+    <Button
+        android:id="@+id/multiPlayer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Multi-Player"/>
+</LinearLayout>

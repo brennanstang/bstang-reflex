@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cmput301.bstang.bstang_reflex" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SinglePlayer"
+            android:label="@string/title_activity_single_player" >
+        </activity>
+        <activity
+            android:name=".NumPlayers"
+            android:label="@string/title_activity_num_players" >
+        </activity>
+        <activity
+            android:name=".TwoPlayer"
+            android:label="@string/title_activity_two_player" >
+        </activity>
+        <activity
+            android:name=".ThreePlayer"
+            android:label="@string/title_activity_three_player" >
+        </activity>
+        <activity
+            android:name=".FourPlayer"
+            android:label="@string/title_activity_four_player" >
+        </activity>
+        <activity
+            android:name=".SinglePlayerInfo"
+            android:label="@string/title_activity_single_player_info" >
+        </activity>
+        <activity
+            android:name=".MultiPlayerInfo"
+            android:label="@string/title_activity_multi_player_info" >
+        </activity>
+    </application>
+
+</manifest>

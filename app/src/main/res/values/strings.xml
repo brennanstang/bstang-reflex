@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">bstang-reflex</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_single_player">SinglePlayer</string>
+    <string name="title_activity_num_players">NumPlayers</string>
+    <string name="title_activity_two_player">TwoPlayer</string>
+    <string name="title_activity_three_player">ThreePlayer</string>
+    <string name="title_activity_four_player">FourPlayer</string>
+    <string name="title_activity_single_player_info">SinglePlayerInfo</string>
+    <string name="title_activity_multi_player_info">MultiPlayerInfo</string>
+</resources>
