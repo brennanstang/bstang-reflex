@@ -16,10 +16,10 @@
         android:id="@+id/singlePlayer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Single Player"/>
+        android:text="Reaction Times"/>
     <Button
         android:id="@+id/multiPlayer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Multi-Player"/>
+        android:text="Gameshow Buzzer"/>
 </LinearLayout>

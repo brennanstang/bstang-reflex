@@ -1,3 +1,17 @@
+/*Copyright [2015] [Brennan Stang]
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.*/
+
 package com.cmput301.bstang.bstang_reflex;
 
 
@@ -27,7 +41,7 @@ public class SingleStats extends SinglePlayer {
     private ListView lv;
     public static List<Integer> first10 = new ArrayList<Integer>();
     public static List<Integer> first100 = new ArrayList<Integer>();
-    public static List<Double> statsList = new ArrayList<Double>();
+    public static List<String> statsList = new ArrayList<String>();
     int minAll;
     int min10;
     int min100;
@@ -86,13 +100,17 @@ public class SingleStats extends SinglePlayer {
         dMax10 = (double)max10;
         dMax100 = (double)max100;
 
-        statsList = Arrays.asList(dMinAll, dMin10, dMin100, dMaxAll, dMax10, dMax100, avgAll, avg10, avg100, medAll, med10, med100);
+        statsList = Arrays.asList("Min of all: " + String.valueOf(dMinAll), "Min if last 10: " + String.valueOf(dMin10),
+                "Min of last 100: " + String.valueOf(dMin100), "Max of all: " + String.valueOf(dMaxAll), "Max of last 10: " + String.valueOf(dMax10),
+                "Max of last 100: " + String.valueOf(dMax100), "Average of all: " + String.valueOf(avgAll), "Average of last 10: " + String.valueOf(avg10),
+                "Average of last 100: " + String.valueOf(avg100), "Median of all: " + String.valueOf(medAll), "Median of last 10: " + String.valueOf(med10),
+                "Median of last 100: " + String.valueOf(med100));
 
 
 
         lv = (ListView) findViewById(R.id.statsList);
 
-        ArrayAdapter<Double> arrayAdapter = new ArrayAdapter<Double>( this,
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>( this,
                 android.R.layout.simple_list_item_1, statsList );
 
         lv.setAdapter(arrayAdapter);
@@ -135,7 +153,7 @@ public class SingleStats extends SinglePlayer {
 
 
         } catch (FileNotFoundException e) {
-            statsList = new ArrayList<Double>();
+            statsList = new ArrayList<String>();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

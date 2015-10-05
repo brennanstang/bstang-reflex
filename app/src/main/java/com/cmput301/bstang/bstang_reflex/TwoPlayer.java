@@ -1,3 +1,17 @@
+/*Copyright [2015] [Brennan Stang]
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.*/
+
 package com.cmput301.bstang.bstang_reflex;
 
 
@@ -15,7 +29,7 @@ import java.util.ArrayList;
 
 public class TwoPlayer extends Activity {
 
-    public static ArrayList<Integer> twoStats = new ArrayList<>();
+    public static ArrayList<String> twoStats = new ArrayList<>();
     int player1 = 0;
     int player2 = 0;
 
@@ -38,8 +52,8 @@ public class TwoPlayer extends Activity {
 
     private OnClickListener statsListener = new OnClickListener() {
         public void onClick(View v) {
-            twoStats.add(player1);
-            twoStats.add(player2);
+            twoStats.add("Player one clicked: " + String.valueOf(player1));
+            twoStats.add("Player two clicked: " +String.valueOf(player2));
             Intent a = new Intent(TwoPlayer.this, TwoStats.class);
             startActivity(a);
         }

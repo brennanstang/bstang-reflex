@@ -1,3 +1,17 @@
+/*Copyright [2015] [Brennan Stang]
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.*/
+
 package com.cmput301.bstang.bstang_reflex;
 
 
@@ -9,13 +23,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 
 public class FourPlayer extends Activity {
 
-    public static ArrayList<Integer> fourStats = new ArrayList<>();
+    public static ArrayList<String> fourStats = new ArrayList<>();
     int player1 = 0;
     int player2 = 0;
     int player3 = 0;
@@ -36,7 +48,7 @@ public class FourPlayer extends Activity {
         Button player_3 = (Button) findViewById(R.id.fourPlayer3);
         player_3.setOnClickListener(player3Listener); // Register the onClick listener with the implementation above
 
-        Button player_4 = (Button) findViewById(R.id.fourPlayer3);
+        Button player_4 = (Button) findViewById(R.id.fourPlayer4);
         player_4.setOnClickListener(player4Listener); // Register the onClick listener with the implementation above
 
         Button stats = (Button) findViewById(R.id.stats);
@@ -46,16 +58,15 @@ public class FourPlayer extends Activity {
 
     private OnClickListener statsListener = new OnClickListener() {
         public void onClick(View v) {
-            fourStats.add(player1);
-            fourStats.add(player2);
-            fourStats.add(player3);
-            fourStats.add(player4);
+            fourStats.add("Player one clicked: " + String.valueOf(player1));
+            fourStats.add("Player two clicked: " +String.valueOf(player2));
+            fourStats.add("Player three clicked: " + String.valueOf(player3));
+            fourStats.add("Player four clicked: " + String.valueOf(player4));
             Intent a = new Intent(FourPlayer.this, FourStats.class);
             startActivity(a);
         }
     };
 
-    //Create an anonymous implementation of OnClickListener
     private OnClickListener player1Listener = new OnClickListener() {
         public void onClick(View v) {
             final AlertDialog player_1 = new AlertDialog.Builder(FourPlayer.this).create();
