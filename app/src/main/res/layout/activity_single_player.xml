@@ -6,6 +6,19 @@
     <Button
         android:id="@+id/buzzer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
         android:text="Press Me"/>
+    <Button
+        android:id="@+id/beginButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Begin Game"/>
+    <Button
+        android:id="@+id/statsButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Stats"/>
 </LinearLayout>

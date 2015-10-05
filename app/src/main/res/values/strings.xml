@@ -10,4 +10,12 @@
     <string name="title_activity_four_player">FourPlayer</string>
     <string name="title_activity_single_player_info">SinglePlayerInfo</string>
     <string name="title_activity_multi_player_info">MultiPlayerInfo</string>
+    <string name="title_activity_statistics_page">StatisticsPage</string>
+    <string name="title_activity_statistics_view">StatisticsView</string>
+    <string name="title_activity_single_stats">SingleStats</string>
+    <string name="title_activity_minimum">Minimum</string>
+    <string name="title_activity_multi_stats">MultiStats</string>
+    <string name="title_activity_two_stats">TwoStats</string>
+    <string name="title_activity_three_stats">ThreeStats</string>
+    <string name="title_activity_four_stats">FourStats</string>
 </resources>

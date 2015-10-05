@@ -2,6 +2,8 @@ package com.cmput301.bstang.bstang_reflex;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
@@ -23,21 +25,41 @@ public class MainMenu extends Activity {
 
         Button multiPlayer = (Button)findViewById(R.id.multiPlayer);
         multiPlayer.setOnClickListener(multiListener); // Register the onClick listener with the implementation above
+
     }
 
     //Create an anonymous implementation of OnClickListener
     private OnClickListener singleListener = new OnClickListener() {
         public void onClick(View v) {
-            Intent a = new Intent(MainMenu.this, SinglePlayerInfo.class);
-            startActivity(a);
+            AlertDialog infoAlert = new AlertDialog.Builder(MainMenu.this).create();
+            infoAlert.setTitle("Single Player Instructions");
+            infoAlert.setMessage("This game tests your reaction time by seeing how fast you can press a button once prompted.\n" +
+                    "After a short delay you will be prompted to press the button on the screen. Then just press it.\n" +
+                    "How fast you reacted will then be displayed for you. You can click on stats to view your previous times.\n" +
+                    "After a short delay the game will restart. To quit just press the back button.");
+            infoAlert.setButton("Okay!", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent a = new Intent(MainMenu.this, SinglePlayer.class);
+                    startActivity(a);
+                }
+            });
+            infoAlert.show();
         }
     };
 
     // Create an anonymous implementation of OnClickListener
     private OnClickListener multiListener = new OnClickListener() {
         public void onClick(View v) {
-            Intent a = new Intent(MainMenu.this, MultiPlayerInfo.class);
-            startActivity(a);
+            AlertDialog infoAlert = new AlertDialog.Builder(MainMenu.this).create();
+            infoAlert.setTitle("Multi-Player Instructions");
+            infoAlert.setMessage("Once you have chosen the required number of players, buzzers will appear for each fo you to press. The first one who presses will be notified.");
+            infoAlert.setButton("Okay!", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent a = new Intent(MainMenu.this, NumPlayers.class);
+                    startActivity(a);
+                }
+            });
+            infoAlert.show();
         }
     };
 

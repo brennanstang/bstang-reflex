@@ -2,6 +2,8 @@ package com.cmput301.bstang.bstang_reflex;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +17,7 @@ public class NumPlayers extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_num_players);
+
 
         Button players_2 = (Button) findViewById(R.id.players2);
         players_2.setOnClickListener(TwoPlayerListener); // Register the onClick listener with the implementation above
@@ -43,7 +46,7 @@ public class NumPlayers extends Activity {
 
     private OnClickListener FourPlayerListener = new OnClickListener() {
         public void onClick(View v) {
-            Intent a = new Intent(NumPlayers.this, ThreePlayer.class);
+            Intent a = new Intent(NumPlayers.this, FourPlayer.class);
             startActivity(a);
         }
     };

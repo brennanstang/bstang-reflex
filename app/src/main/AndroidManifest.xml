@@ -37,12 +37,28 @@
             android:label="@string/title_activity_four_player" >
         </activity>
         <activity
-            android:name=".SinglePlayerInfo"
-            android:label="@string/title_activity_single_player_info" >
+            android:name=".StatisticsView"
+            android:label="@string/title_activity_statistics_view" >
         </activity>
         <activity
-            android:name=".MultiPlayerInfo"
-            android:label="@string/title_activity_multi_player_info" >
+            android:name=".SingleStats"
+            android:label="@string/title_activity_single_stats" >
+        </activity>
+        <activity
+            android:name=".MultiStats"
+            android:label="@string/title_activity_multi_stats" >
+        </activity>
+        <activity
+            android:name=".TwoStats"
+            android:label="@string/title_activity_two_stats" >
+        </activity>
+        <activity
+            android:name=".ThreeStats"
+            android:label="@string/title_activity_three_stats" >
+        </activity>
+        <activity
+            android:name=".FourStats"
+            android:label="@string/title_activity_four_stats" >
         </activity>
     </application>
 

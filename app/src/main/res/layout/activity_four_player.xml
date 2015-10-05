@@ -7,24 +7,30 @@
         android:id="@+id/fourPlayer1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.225"
         android:text="Player 1"/>
     <Button
         android:id="@+id/fourPlayer2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.225"
         android:text="Player 2"/>
     <Button
         android:id="@+id/fourPlayer3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.225"
         android:text="Player 3"/>
     <Button
         android:id="@+id/fourPlayer4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.225"
         android:text="Player 4"/>
+    <Button
+        android:id="@+id/stats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Stats"/>
 </LinearLayout>
